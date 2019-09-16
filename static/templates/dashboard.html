@@ -1,0 +1,41 @@
+{% extends "header.html" %}
+
+{% block body %}
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="python-tab" data-toggle="tab" href="#python" role="tab" aria-controls="python" aria-selected="true">Python</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="cs-tab" data-toggle="tab" href="#cs" role="tab" aria-controls="cs" aria-selected="false">C#</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="javascript-tab" data-toggle="tab" href="#javascript" role="tab" aria-controls="javascript" aria-selected="false">JavaScript</a>
+  </li>
+</ul>
+
+
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="python" role="tabpanel" aria-labelledby="python-tab">
+    TBA: All my Python projects will be listed here
+    <ul>
+        {% for t in TOPIC_DICT["Python"] %}
+            <li><a href="{{t[1]}}">{{t[0]}}</a></li>
+        
+        {% endfor %}
+    </ul>
+
+
+  </div>
+  <div class="tab-pane fade" id="cs" role="tabpanel" aria-labelledby="cs-tab">
+    TBA: All my C# projects will be listed here
+
+
+  </div>
+  <div class="tab-pane fade" id="javascript" role="tabpanel" aria-labelledby="javascript-tab">TBA: All my JavaScript projects will be listed here
+
+
+  </div>
+</div>
+
+{% endblock %}

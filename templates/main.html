@@ -1,0 +1,77 @@
+{% extends "header.html" %}
+{% block body %}
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<div id="my-slider" class="carousel slide" data-ride="carousel">
+				
+				<!-- indicators dot nov -->
+
+
+				<!-- wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<!-- src="{{ url_for('static', filename='images/background_dark.png') }}" -->
+						<img class="first-slide" src="static/images/background_dark.png" alt="First slide">
+						<div class="carousel-caption">
+							<h2>First</h2>
+						</div>
+					</div>
+				</div>
+
+				<!-- controls or next and prev buttons -->
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container marketing">
+	    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+      <div class="col-md-5">
+        <img style="max-width: 100px; margin-top: -7px;" src="{{ url_for('static', filename='images/mainlogo.png') }}">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img style="max-width: 100px; margin-top: -7px;" src="{{ url_for('static', filename='images/mainlogo.png') }}">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+      <div class="col-md-5">
+        <img style="max-width: 100px; margin-top: -7px;" src="{{ url_for('static', filename='images/mainlogo.png') }}">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+</div>
+
+
+{% endblock %}

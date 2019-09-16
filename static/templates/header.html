@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Lage en nettside med Python og Flask</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+</head>
+
+<header>
+	<nav class="navbar navbar-expand-md navbar-light bg-light">
+	<div class="mx-auto order-0">
+        <a class="navbar-brand mx-auto" href="/">
+        	<img style="max-width: 100px; margin-top: -7px;" src="{{ url_for('static', filename='images/mainlogo.png') }}">
+        </a>
+    </div>
+
+
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="coding/">Coding</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Public Speaking</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Working Out</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Productivity</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+</header>
+
+
+
+
+<body>
+
+    
+    <div class="container-fluid" style="min-height: 100%">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-warning alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{ message }}
+
+                </div>
+                {% endfor %}
+            {% endif %}
+
+        {% endwith %}
+        
+        {% block body %} {% endblock %}
+
+    </div>
+
+	<!-- FOOTER -->
+	<footer class="container">
+		<p class="float-right"><a href="#">Back to top</a></p>
+		<p>&copy; 2019 MLN &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+	</footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
