@@ -27,6 +27,26 @@ def coding():
 	except Exception as e:
 		return(str(e))
 
+@app.route('/public_speaking/')
+def public_speaking():
+	try:
+		return render_template("public_speaking.html")
+	except Exception as e:
+		return(str(e))
+
+@app.route('/working_out/')
+def working_out():
+	try:
+		return render_template("working_out.html")
+	except Exception as e:
+		return(str(e))
+
+@app.route('/productivity/')
+def productivity():
+	try:
+		return render_template("productivity.html")
+	except Exception as e:
+		return(str(e))
 
 @app.route('/dashboard/')
 def dashboard():
